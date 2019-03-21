@@ -1,0 +1,9 @@
+{
+	"name": "nicholashancox.com",
+	"description": "The source for nicholashancox.com",
+	"version": "1.0.0",
+	"author": "Nicholas Hancox",
+	"dependencies": {
+		"bulma": "^0.7.4"
+	}
+}

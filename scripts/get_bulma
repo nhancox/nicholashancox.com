@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "$SCRIPT_DIR" || exit 1
+cd ..
+yarn && cp node_modules/bulma/css/bulma.min.css public/css
