@@ -6,8 +6,7 @@ html, body {
 	scroll-behavior: smooth;
 }
 
-h1.title, h2.title, h3.title, h4.title, h5.title, h6.title,
-h1.subtitle, h2.subtitle, h3.subtitle, h4.subtitle, h5.subtitle, h6.subtitle {
+.title, .subtitle {
 	color: #c6cddb;
 }
 
@@ -15,24 +14,13 @@ a .icon {
 	color: #c6cddb;
 }
 
-container.is-vcentered {
-	align-content: center;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-#main {
-	height: 90vh;
-}
-
-.is-500x500 {
-	height: 500px;
-	width: 500px;
+#pseudo-footer {
+	margin-top: 4rem;
 }
 
 .icon-list {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .is-centered {
