@@ -1,0 +1,5 @@
+# Redirect Netlify subdomain to primary domain
+https://nicholashancox.netlify.com/* https://www.nicholashancox.com/:splat 301!
+
+# Site routing
+/* /index.html 200

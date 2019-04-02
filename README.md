@@ -12,6 +12,16 @@ This is the source for my personal site, [nicholashancox.com](https://nicholasha
 
 ## Notes
 
+### Netlify
+
+* Publish Directory: `public/`
+* Redirects and Routing: `public/_redirects`
+
+#### Asset Optimization
+
+* URLs: pretty URLs
+* CSS: bundle and minify
+
 ### Bulma
 
 The minified Bulma CSS is committed to avoid any build step requirement.
