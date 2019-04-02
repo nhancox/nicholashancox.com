@@ -20,7 +20,6 @@ This is the source for my personal site, [nicholashancox.com](https://nicholasha
 #### Asset Optimization
 
 * URLs: pretty URLs
-* CSS: bundle and minify
 
 ### Bulma
 
