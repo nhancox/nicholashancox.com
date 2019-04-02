@@ -2,4 +2,5 @@
 https://nicholashancox.netlify.com/* https://www.nicholashancox.com/:splat 301!
 
 # Site routing
+# Redirects and also rewrites to `/index.html`
 /* /index.html
