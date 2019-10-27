@@ -1,0 +1,46 @@
+footer {
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+}
+
+main {
+	text-align: center;
+}
+
+/* Original image resolution is 500px by 500px */
+.headshot {
+	/* Border radius used by Bulma for rounding images */
+	border-radius: 290486px;
+	margin-top: 3rem;
+	height: 300px;
+	width: 300px;
+}
+@media screen and (min-width: 576px) {
+	.headshot {
+		height: 400px;
+		width: 400px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.headshot {
+		margin-top: 6rem;
+		height: 500px;
+		width: 500px;
+	}
+}
+
+.icon-link {
+	margin: 0.5rem;
+	text-decoration: none;
+}
+
+.name {
+	margin-bottom: 0.5rem;
+}
+
+.title {
+	margin-top: 0.5rem;
+}

@@ -1,9 +1,25 @@
 {
 	"name": "nicholashancox.com",
 	"description": "The source for nicholashancox.com",
-	"version": "1.0.0",
 	"author": "Nicholas Hancox",
+	"scripts": {
+		"build": "parcel build src/views/*.html --no-source-maps",
+		"clean": "node cleanDist.js",
+		"clean:cache": "node cleanCache.js",
+		"dev": "parcel src/views/*.html"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 1%"
+	],
 	"dependencies": {
-		"bulma": "^0.7.4"
+		"@fortawesome/fontawesome-svg-core": "^1.2.25",
+		"@fortawesome/free-brands-svg-icons": "^5.11.2",
+		"normalize.css": "^8.0.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.7.0",
+		"del": "^5.1.0",
+		"parcel-bundler": "^1.12.4"
 	}
 }

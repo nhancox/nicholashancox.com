@@ -1,34 +1,20 @@
 # nicholashancox.com
 
-This is the source for my personal site, [nicholashancox.com](https://nicholashancox.com).
+This is the source for my personal site,
+[nicholashancox.com](https://www.nicholashancox.com).
 
 ## Acknowledgments/Tools Used
 
 * Netlify: hosting and deployment
-* Bulma: CSS framework
-* Font Awesome: LinkedIn and GitHub icons
-* Fontello: To extract only the used icons and easily rename them to avoid browser and ad-block filtering
-* Yarn: Package management
+* Yarn: package management
+* Parcel: build tool
+* normalize.css: basic styling standard acoss browsers
+* Font Awesome: SVG icons via JS
 
 ## Notes
 
 ### Netlify
 
-* Publish Directory: `public/`
-* Redirects and Routing: `public/_redirects`
+All settings are contained in `netlify.toml`.
 
-#### Asset Optimization
-
-* URLs: pretty URLs
-
-Netlify uses a CDN for included images by default. However, to reduce reliance on third-party domains other assets are kept separate (e.g., CSS files are not optimized through Netlify's pipeline).
-
-### Bulma
-
-The minified Bulma CSS is committed to avoid any build step requirement.
-
-`scripts/get_bulma` can be used to download Bulma and move the minified version to the proper location.
-
-### Fontello
-
-The Fontello files were compiled outside of the project. To replicate, use the provided `fontello.config.json`.
+Bundling and optimization is handled by Parcel.
