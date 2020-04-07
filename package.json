@@ -1,25 +1,39 @@
 {
-	"name": "nicholashancox.com",
-	"description": "The source for nicholashancox.com",
-	"author": "Nicholas Hancox",
-	"scripts": {
-		"build": "parcel build src/views/*.html --no-source-maps",
-		"clean": "node cleanDist.js",
-		"clean:cache": "node cleanCache.js",
-		"dev": "parcel src/views/*.html"
-	},
-	"browserslist": [
-		"last 1 version",
-		"> 1%"
-	],
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.25",
-		"@fortawesome/free-brands-svg-icons": "^5.11.2",
-		"normalize.css": "^8.0.1"
-	},
-	"devDependencies": {
-		"autoprefixer": "^9.7.0",
-		"del": "^5.1.0",
-		"parcel-bundler": "^1.12.4"
-	}
+  "name": "nicholashancox.com",
+  "description": "The source for nicholashancox.com",
+  "author": "Nicholas Hancox",
+  "scripts": {
+    "build": "parcel build src/views/*.html --no-source-maps",
+    "clean": "node cleanDist.js",
+    "clean:cache": "node cleanCache.js",
+    "dev": "parcel src/views/*.html",
+    "lint:eslint": "eslint --fix",
+    "lint:markdown": "markdownlint",
+    "lint:prettier": "prettier --loglevel silent --write",
+    "lint:all": "run-s lint:all:*",
+    "lint:all:eslint": "npm run lint:eslint -- . --ext .js",
+    "lint:all:markdown": "npm run lint:markdown -- \"**/*.md\" --ignore node_modules",
+    "lint:all:prettier": "npm run lint:prettier \"**/*.{css,html,json,json5,jsonc,md}\""
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "del": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2",
+    "markdownlint-cli": "^0.22.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.4"
+  }
 }
