@@ -1,29 +1,37 @@
 [build]
-	base = "/"
-	publish = "dist/"
-	command = "yarn build"
+    base = "/"
+    publish = "dist/"
+    command = "yarn build"
 
 # Redirect Netlify subdomain to primary domain
 [[redirects]]
-	from = "https://nicholashancox.netlify.com/*"
-	to = "https://www.nicholashancox.com/:splat"
-	status = 301
-	force = true
+    from = "https://nicholashancox.netlify.com/*"
+    to = "https://www.nicholashancox.com/:splat"
+    status = 301
+    force = true
 
 [[redirects]]
-	from = "/"
-	to = "/home.html"
+    from = "/"
+    to = "/home"
+
+[[redirects]]
+    from = "/home.html"
+    to = "/home"
+
+[[redirects]]
+    from = "/animate-objects-calculator.html"
+    to = "/animate-objects-calculator"
 
 [build.processing.html]
-	pretty_urls = true
+    pretty_urls = true
 
 # All required processing is already finished or completed with the build
 # command
 [build.processing.css]
-	bundle = false
-	minify = false
+    bundle = false
+    minify = false
 [build.processing.js]
-	bundle = false
-	minify = false
+    bundle = false
+    minify = false
 [build.processing.images]
-	compress = false
+    compress = false

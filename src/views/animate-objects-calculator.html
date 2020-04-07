@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Animate Objects Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/animate-objects-calculator.css"
+    />
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/animateObjectsCalculator.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Animate Objects Calculator</h1>
+
+      <details class="spell-details">
+        <summary>Spell Details</summary>
+        <div id="spell"></div>
+      </details>
+
+      <form>
+        <div class="form-row">
+          <label for="size-select">
+            Choose an object size:
+            <select id="size-select" name="size" required>
+              <option value="">--Choose a size--</option>
+              <option value="tiny">Tiny</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="huge">Huge</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="number-input">
+            Number of objects (1-10):
+            <input
+              id="number-input"
+              max="10"
+              min="1"
+              name="number"
+              required
+              type="number"
+            />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <button id="roll-hit" type="button">
+            Roll to Hit
+          </button>
+
+          <button id="roll-damage" type="button">
+            Roll for Damage
+          </button>
+        </div>
+      </form>
+
+      <section id="result-section" hidden>
+        <h2>Results</h2>
+
+        <div id="result-area"></div>
+
+        <details id="raw-rolls-details">
+          <summary>Raw Rolls</summary>
+          <p id="raw-rolls"></p>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
