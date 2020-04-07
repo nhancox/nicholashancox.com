@@ -14,14 +14,6 @@
     from = "/"
     to = "/home"
 
-[[redirects]]
-    from = "/home.html"
-    to = "/home"
-
-[[redirects]]
-    from = "/animate-objects-calculator.html"
-    to = "/animate-objects-calculator"
-
 [build.processing.html]
     pretty_urls = true
 
