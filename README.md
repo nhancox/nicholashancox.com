@@ -8,7 +8,8 @@ This is the source for my personal site,
 - Netlify: hosting and deployment
 - Yarn: package management
 - Parcel: build tool
-- normalize.css: basic styling standard acoss browsers
+- Pug: templating
+- normalize.css: basic styling standard across browsers
 - Font Awesome: SVG icons via JS
 
 ## Notes

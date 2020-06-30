@@ -1,0 +1,52 @@
+extends templates/layout.pug
+
+block title
+  title Animate Objects Calculator
+
+block append stylesheets
+  link(href="../css/animate-objects-calculator.css", rel="stylesheet")
+
+block append scripts
+  script(src="../js/animateObjectsCalculator.js", type="module")
+
+block content
+  main
+    h1 Animate Objects Calculator
+
+    details.spell-details
+      summary Spell Details
+      #spell
+
+    form
+      .form-row
+        label(for="size-select") Choose an object size:
+          select#size-select(name="size", required)
+            option(value="") --Choose a size--
+            option(value="tiny") Tiny
+            option(value="small") Small
+            option(value="medium") Medium
+            option(value="large") Large
+            option(value="huge") Huge
+
+      .form-row
+        label(for="number-input") Number of objects (1-10):
+          input#number-input(
+            max="10",
+            min="1",
+            name="number",
+            required,
+            type="number"
+          )
+
+      .form-row
+        button#roll-hit(type="button") Roll to Hit
+        button#roll-damage(type="button") Roll for Damage
+
+    section#result-section(hidden)
+      h2 Results
+
+      #result-area
+
+      details#raw-rolls-details
+        summary Raw Rolls
+        p#raw-rolls

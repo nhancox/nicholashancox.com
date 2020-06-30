@@ -1,0 +1,31 @@
+extends templates/layout.pug
+
+block append stylesheets
+  link(href="../css/home.css", rel="stylesheet")
+
+block content
+  main
+    img.headshot(
+      height="500px",
+      src="../../static/nicholas.jpg",
+      width="500px"
+    )
+
+    h1.name Nicholas Hancox
+    h2.title Software Engineer
+
+    a.icon-link(href="https://www.linkedin.com/in/nhancox")
+      i.fab.fa-linkedin-in.fa-2x
+    //- (TODO) Off-center because the previous element still exists
+    noscript
+      a(href="https://www.linkedin.com/in/nhancox") LinkedIn
+
+    a.icon-link(href="https://github.com/nhancox")
+      i.fab.fa-github.fa-2x
+    noscript
+      a(href="https://github.com/nhancox") GitHub
+
+  footer
+    p.
+      Source code available on
+      #[a(href="https://github.com/nhancox/nicholashancox.com") GitHub]

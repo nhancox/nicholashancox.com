@@ -31,3 +31,7 @@ indent_style = space
 [*.md]
 indent_size = 2
 indent_style = space
+
+[*.pug]
+indent_size = 2
+indent_style = space
