@@ -13,3 +13,15 @@ main {
 .spell-details {
   margin-bottom: 1rem;
 }
+
+#roll-hit {
+  margin-right: 0.5rem;
+}
+
+#spell > ul {
+  margin-top: 0.5rem;
+}
+
+#spell > ul > li > ul {
+  margin-bottom: 1rem;
+}

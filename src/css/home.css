@@ -1,9 +1,7 @@
 footer {
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
+  margin-top: 5rem;
+  text-align: center;
 }
 
 main {
@@ -18,15 +16,16 @@ main {
   height: 300px;
   width: 300px;
 }
+
 @media screen and (min-width: 576px) {
   .headshot {
     height: 400px;
     width: 400px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .headshot {
-    margin-top: 6rem;
     height: 500px;
     width: 500px;
   }
@@ -39,6 +38,7 @@ main {
 
 .name {
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .title {

@@ -5,12 +5,15 @@ This is the source for my personal site,
 
 ## Acknowledgments/Tools Used
 
-- Netlify: hosting and deployment
-- Yarn: package management
-- Parcel: build tool
-- Pug: templating
-- normalize.css: basic styling standard across browsers
-- Font Awesome: SVG icons via JS
+- [Netlify](https://www.netlify.com/): hosting and deployment
+- [Yarn](https://yarnpkg.com/): package management
+- [Parcel](https://github.com/parcel-bundler/parcel): build tool
+- [Pug](https://github.com/pugjs/pug): templating
+- [normalize.css](https://github.com/necolas/normalize.css): basic styling
+  standard across browsers
+- [sakura](https://github.com/oxalorg/sakura)'s sakura-dark: an initial base for
+  my CSS
+- [Font Awesome](https://fontawesome.com/): SVG icons via JS
 
 ## Notes
 
@@ -18,4 +21,5 @@ This is the source for my personal site,
 
 All settings are contained in `netlify.toml`.
 
-Bundling and optimization is handled by Parcel.
+Bundling and optimization is handled by Parcel (aiming for the least possible
+dependence on third parties).

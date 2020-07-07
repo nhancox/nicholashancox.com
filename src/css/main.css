@@ -1,10 +1,18 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
+/*
+  Uses sakura-dark as an initial base.
+  See https://github.com/oxalorg/sakura
+*/
+
 :root {
-  --color-background: #494f5c;
-  --color-text: #c6cddb;
+  /* In order from light to dark */
+  --color-light: #ffffff;
+  --color-text: #c9c9c9;
+  --color-mid: #4a4a4a;
+  --color-background: #222222;
+
   --font-family: sans-serif;
-  --font-size: 16px;
 
   /* Bootstrap Breakpoints */
   --breakpoint-xs: 0px;
@@ -22,14 +30,233 @@
 
 html {
   font-family: var(--font-family);
-  font-size: var(--font-size);
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 1.5;
+  margin: auto;
+  max-width: 38em;
+  padding: 13px;
 }
 
+/* General Elements */
+
 a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+a:hover {
   color: var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+}
+
+blockquote {
+  border-left: 3px solid var(--color-light);
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -ms-word-break: break-all;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+hr {
+  border-color: var(--color-light);
+}
+
+img {
+  height: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+small,
+sub,
+sup {
+  font-size: 75%;
+}
+
+/* Forms, input and buttons */
+
+input,
+textarea {
+  border: 1px solid var(--color-text);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--color-light);
+}
+
+textarea {
+  width: 100%;
+}
+
+.button,
+button {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+  border-radius: 1px;
+  box-sizing: border-box;
+  color: var(--color-background);
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button[disabled],
+button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button:focus:enabled,
+.button:hover:enabled,
+button:focus:enabled,
+button:hover:enabled {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-background);
+  outline: 0;
+}
+
+select,
+textarea,
+input[type] {
+  background-color: var(--color-mid);
+  border: 1px solid var(--color-mid);
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: var(--color-text);
+  margin-bottom: 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 6px 10px;
+}
+
+select:focus,
+textarea:focus,
+input[type]:focus {
+  border: 1px solid var(--color-light);
+  outline: 0;
+}
+
+input[type="checkbox"]:focus {
+  outline: 1px dotted var(--color-light);
+}
+
+fieldset,
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+
+ol {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+ul {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+/* Preformatted and Code */
+
+pre {
+  background-color: var(--color-mid);
+  display: block;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code {
+  background-color: var(--color-mid);
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  white-space: pre-wrap;
+}
+
+pre > code {
+  background-color: transparent;
+  padding: 0;
+  white-space: pre;
+}
+
+/* Tables */
+
+table {
+  border-collapse: collapse;
+  text-align: justify;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--color-mid);
+  padding: 0.5em;
 }

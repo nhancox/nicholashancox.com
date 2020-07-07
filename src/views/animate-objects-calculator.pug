@@ -20,23 +20,23 @@ block content
     form
       .form-row
         label(for="size-select") Choose an object size:
-          select#size-select(name="size", required)
-            option(value="") --Choose a size--
-            option(value="tiny") Tiny
-            option(value="small") Small
-            option(value="medium") Medium
-            option(value="large") Large
-            option(value="huge") Huge
+        select#size-select(name="size", required)
+          option(value="") --Choose a size--
+          option(value="tiny") Tiny
+          option(value="small") Small
+          option(value="medium") Medium
+          option(value="large") Large
+          option(value="huge") Huge
 
       .form-row
         label(for="number-input") Number of objects (1-10):
-          input#number-input(
-            max="10",
-            min="1",
-            name="number",
-            required,
-            type="number"
-          )
+        input#number-input(
+          max="10",
+          min="1",
+          name="number",
+          required,
+          type="number"
+        )
 
       .form-row
         button#roll-hit(type="button") Roll to Hit
