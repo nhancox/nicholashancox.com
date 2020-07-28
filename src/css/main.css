@@ -7,10 +7,10 @@
 
 :root {
   /* In order from light to dark */
-  --color-light: #ffffff;
+  --color-light: #fff;
   --color-text: #c9c9c9;
   --color-mid: #4a4a4a;
-  --color-background: #222222;
+  --color-background: #222;
 
   --font-family: sans-serif;
 
@@ -37,8 +37,12 @@ body {
   color: var(--color-text);
   line-height: 1.5;
   margin: auto;
-  max-width: 38em;
-  padding: 13px;
+  /*
+    Targetting around 80 characters a line. Since `ch` uses the `0` character,
+    on average you require a smaller number. Depending on font, usually 60-65ch.
+  */
+  max-width: 65ch;
+  padding: 0.75rem;
 }
 
 /* General Elements */
@@ -68,15 +72,11 @@ h5,
 h6 {
   font-weight: 700;
   hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   margin-top: 3rem;
   overflow-wrap: break-word;
   word-break: break-word;
-  -ms-word-break: break-all;
   word-wrap: break-word;
 }
 
