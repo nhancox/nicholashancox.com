@@ -3,41 +3,46 @@
   "description": "The source for nicholashancox.com",
   "author": "Nicholas Hancox",
   "scripts": {
-    "build": "parcel build src/views/*.pug --no-source-maps",
-    "clean": "node cleanDist.js",
-    "clean:cache": "node cleanCache.js",
-    "dev": "parcel src/views/*.pug",
-    "dev:netlify": "netlify dev",
+    "build": "node scripts/runBuild.js",
+    "clean": "node scripts/runClean.js",
+    "dev": "node scripts/dev.js",
     "lint:eslint": "eslint --fix",
     "lint:markdown": "markdownlint",
     "lint:prettier": "prettier --loglevel silent --write",
     "lint:all": "run-s lint:all:*",
     "lint:all:eslint": "npm run lint:eslint -- . --ext .js",
     "lint:all:markdown": "npm run lint:markdown -- \"**/*.md\" --ignore node_modules",
-    "lint:all:prettier": "npm run lint:prettier \"**/*.{css,html,json,json5,jsonc,md}\""
+    "lint:all:prettier": "npm run lint:prettier \"**/*.{css,html,json,json5,jsonc,md,pug}\""
   },
   "browserslist": [
     "last 1 version",
     "> 1%"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.28",
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@prettier/plugin-pug": "^1.4.4",
-    "autoprefixer": "^9.7.6",
+    "@prettier/plugin-pug": "^1.5.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "autoprefixer": "^9.8.5",
+    "browser-sync": "^2.26.12",
+    "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.1.2",
-    "markdownlint-cli": "^0.22.0",
-    "netlify-cli": "^2.54.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "htmlnano": "^0.2.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "markdownlint-cli": "^0.23.2",
+    "netlify-cli": "^2.58.0",
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.4",
-    "pug": "^3.0.0"
+    "postcss": "^7.0.32",
+    "posthtml": "^0.13.1",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "rollup": "^2.26.2",
+    "rollup-plugin-terser": "^7.0.0"
   }
 }

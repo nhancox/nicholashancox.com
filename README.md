@@ -3,23 +3,38 @@
 This is the source for my personal site,
 [nicholashancox.com](https://www.nicholashancox.com).
 
-## Acknowledgments/Tools Used
+## Production Build
 
-- [Netlify](https://www.netlify.com/): hosting and deployment
-- [Yarn](https://yarnpkg.com/): package management
-- [Parcel](https://github.com/parcel-bundler/parcel): build tool
-- [Pug](https://github.com/pugjs/pug): templating
-- [normalize.css](https://github.com/necolas/normalize.css): basic styling
-  standard across browsers
-- [sakura](https://github.com/oxalorg/sakura)'s sakura-dark: an initial base for
-  my CSS
-- [Font Awesome](https://fontawesome.com/): SVG icons via JS
+```sh
+npm install
+npm run build
+```
 
-## Notes
+The build process is custom, with PostCSS, PostHTML and Rollup with terser
+forming the base.
 
-### Netlify
+All processed files appear in a `dist/` directory at the project root. This
+directory is structured so that the file paths are the same as the site's
+routes.
 
-All settings are contained in `netlify.toml`.
+The site is completely static, so only that single directory has to be served.
 
-Bundling and optimization is handled by Parcel (aiming for the least possible
-dependence on third parties).
+## Development
+
+```sh
+npm run dev
+```
+
+Browsersync is used to watch files, trigger rebuilds and refresh attached
+browsers. The triggered build processes save over existing files and don't
+utilize any sort of filename hashing, so the directory doesn't have to be
+cleaned between builds.
+
+To manually clean out the `dist/` directory, use `npm run clean`.
+
+## Deployment
+
+The site is hosted by [Netlify](https://www.netlify.com/) and is automatically
+deployed when changes are detected on this GitHub repository.
+
+The few settings required are contained in [`netlify.toml`](netlify.toml).
