@@ -72,8 +72,8 @@ const possibleErrors = {
       skipStrings: true,
       skipComments: false,
       skipRegExps: true,
-      skipTemplates: true
-    }
+      skipTemplates: true,
+    },
   ],
 
   // Recommended
@@ -113,7 +113,7 @@ const possibleErrors = {
   "use-isnan": "error",
 
   // Recommended
-  "valid-typeof": ["error", { requireStringLiterals: true }]
+  "valid-typeof": ["error", { requireStringLiterals: true }],
 };
 
 const bestPractices = {
@@ -193,8 +193,8 @@ const bestPractices = {
       boolean: true,
       number: true,
       string: true,
-      allow: []
-    }
+      allow: [],
+    },
   ],
 
   "no-implicit-globals": "error",
@@ -261,8 +261,8 @@ const bestPractices = {
     {
       allowShortCircuit: false,
       allowTernary: false,
-      allowTaggedTemplates: false
-    }
+      allowTaggedTemplates: false,
+    },
   ],
 
   // Recommended, Fixable
@@ -304,12 +304,12 @@ const bestPractices = {
   "wrap-iife": ["error", "inside"],
 
   // Fixable
-  yoda: ["error", "never"]
+  yoda: ["error", "never"],
 };
 
 const strictMode = {
   // Fixable
-  strict: ["error", "global"]
+  strict: ["error", "global"],
 };
 
 const variables = {
@@ -326,8 +326,8 @@ const variables = {
     "error",
     {
       builtinGlobals: true,
-      hoist: "all"
-    }
+      hoist: "all",
+    },
   ],
 
   // Recommended
@@ -348,14 +348,14 @@ const variables = {
       vars: "all",
       args: "all",
       ignoreRestSiblings: false,
-      caughtErrors: "all"
-    }
+      caughtErrors: "all",
+    },
   ],
 
   "no-use-before-define": [
     "error",
-    { functions: false, classes: true, variables: true }
-  ]
+    { functions: false, classes: true, variables: true },
+  ],
 };
 
 const nodeAndCommonJS = {
@@ -371,8 +371,8 @@ const nodeAndCommonJS = {
     "error",
     {
       grouping: true,
-      allowCall: true
-    }
+      allowCall: true,
+    },
   ],
 
   "no-new-require": "error",
@@ -387,7 +387,7 @@ const nodeAndCommonJS = {
 
   "no-restricted-modules": "off",
 
-  "no-sync": ["error", { allowAtRootLevel: false }]
+  "no-sync": ["error", { allowAtRootLevel: false }],
 };
 
 // Only includes rules that are not covered by Prettier
@@ -397,7 +397,7 @@ const stylisticIssues = {
 
   camelcase: [
     "error",
-    { properties: "always", ignoreDestructuring: false, allow: [] }
+    { properties: "always", ignoreDestructuring: false, allow: [] },
   ],
 
   // Fixable
@@ -411,8 +411,8 @@ const stylisticIssues = {
       ignorePattern:
         ".{0,20}$|[a-z]+ ?[0-9A-Z_.(/=:[#-]|std|http|ssh|ftp|(let|var|const) [a-z_A-Z0-9]+ =|[b-z] |[a-z]*[0-9].* ",
       ignoreInlineComments: true,
-      ignoreConsecutiveComments: true
-    }
+      ignoreConsecutiveComments: true,
+    },
   ],
 
   // Fixable
@@ -457,14 +457,14 @@ const stylisticIssues = {
   "sort-keys": [
     "error",
     "asc",
-    { caseSensitive: true, minKeys: 2, natural: true }
+    { caseSensitive: true, minKeys: 2, natural: true },
   ],
 
   // Fixable
   "sort-vars": ["error", { ignoreCase: false }],
 
   // Fixable
-  "spaced-comment": ["error", "always"]
+  "spaced-comment": ["error", "always"],
 };
 
 const ecmaScript6 = {
@@ -517,7 +517,7 @@ const ecmaScript6 = {
   // Fixable
   "no-useless-rename": [
     "error",
-    { ignoreImport: false, ignoreExport: false, ignoreDestructuring: false }
+    { ignoreImport: false, ignoreExport: false, ignoreDestructuring: false },
   ],
 
   // Fixable
@@ -529,13 +529,13 @@ const ecmaScript6 = {
   // Fixable
   "prefer-arrow-callback": [
     "error",
-    { allowNamedFunctions: false, allowUnboundThis: false }
+    { allowNamedFunctions: false, allowUnboundThis: false },
   ],
 
   // Fixable
   "prefer-const": [
     "error",
-    { destructuring: "any", ignoreReadBeforeAssign: false }
+    { destructuring: "any", ignoreReadBeforeAssign: false },
   ],
 
   // Fixable
@@ -564,8 +564,8 @@ const ecmaScript6 = {
       ignoreCase: false,
       ignoreDeclarationSort: false,
       ignoreMemberSort: false,
-      memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
-    }
+      memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+    },
   ],
 
   "symbol-description": "error",
@@ -575,7 +575,7 @@ const ecmaScript6 = {
   "template-curly-spacing": "off",
 
   // Fixable
-  "yield-star-spacing": ["error", "after"]
+  "yield-star-spacing": ["error", "after"],
 };
 
 module.exports = {
@@ -583,23 +583,23 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     // ES11 === ES2020
     ecmaVersion: 11,
     ecmaFeatures: { impliedStrict: true },
-    sourceType: "module"
+    sourceType: "module",
   },
   plugins: ["prettier"],
-  rules: Object.assign(
-    { "prettier/prettier": "error" },
-    possibleErrors,
-    bestPractices,
-    strictMode,
-    variables,
-    nodeAndCommonJS,
-    stylisticIssues,
-    ecmaScript6
-  )
+  rules: {
+    "prettier/prettier": "error",
+    ...possibleErrors,
+    ...bestPractices,
+    ...strictMode,
+    ...variables,
+    ...nodeAndCommonJS,
+    ...stylisticIssues,
+    ...ecmaScript6,
+  },
 };

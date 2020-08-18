@@ -3,42 +3,42 @@ const OBJECT_HIT_DAMAGE = {
     damage: {
       d: 12,
       number: 2,
-      plus: 4
+      plus: 4,
     },
-    hit: 8
+    hit: 8,
   },
   large: {
     damage: {
       d: 10,
       number: 2,
-      plus: 2
+      plus: 2,
     },
-    hit: 6
+    hit: 6,
   },
   medium: {
     damage: {
       d: 6,
       number: 2,
-      plus: 1
+      plus: 1,
     },
-    hit: 5
+    hit: 5,
   },
   small: {
     damage: {
       d: 8,
       number: 1,
-      plus: 2
+      plus: 2,
     },
-    hit: 6
+    hit: 6,
   },
   tiny: {
     damage: {
       d: 4,
       number: 1,
-      plus: 4
+      plus: 4,
     },
-    hit: 8
-  }
+    hit: 8,
+  },
 };
 const OBJECT_SIZES = ["Tiny", "Small", "Medium", "Large", "Huge"];
 

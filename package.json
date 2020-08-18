@@ -9,10 +9,10 @@
     "lint:eslint": "eslint --fix",
     "lint:markdown": "markdownlint",
     "lint:prettier": "prettier --loglevel silent --write",
-    "lint:all": "run-s lint:all:*",
+    "lint:all": "run-s lint:all:eslint lint:all:prettier lint:all:markdown",
     "lint:all:eslint": "npm run lint:eslint -- . --ext .js",
     "lint:all:markdown": "npm run lint:markdown -- \"**/*.md\" --ignore node_modules",
-    "lint:all:prettier": "npm run lint:prettier \"**/*.{css,html,json,json5,jsonc,md,pug}\""
+    "lint:all:prettier": "npm run lint:prettier -- \"**/*.{css,html,json,json5,jsonc,md,pug}\""
   },
   "browserslist": [
     "last 1 version",

@@ -37,7 +37,7 @@ const build = require("../lib/build.js");
     open: "local",
     server: { baseDir: "dist" },
     startPath: "/home.html",
-    watch: false
+    watch: false,
   });
 })().catch((err) => {
   console.error(err);
