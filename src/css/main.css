@@ -21,14 +21,15 @@
   --breakpoint-xl: 1200px;
 }
 
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: var(--font-family);
+  box-sizing: inherit;
 }
 
 body {
