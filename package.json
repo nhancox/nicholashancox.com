@@ -33,7 +33,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.4",
     "htmlnano": "^0.2.6",
-    "husky": "^4.2.5",
+    "husky": "^4.3.8",
     "lint-staged": "^10.2.11",
     "markdownlint-cli": "^0.23.2",
     "netlify-cli": "^2.58.0",
